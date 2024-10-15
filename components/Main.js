@@ -1,42 +1,32 @@
 import { useState } from "react";
-import { Text, TouchableHighlight, View } from "react-native";
-import { FlatList } from "react-native-web";
-export const Main = ({ navigation }) => {
+import { TouchableHighlight } from "react-native";
+import { FlatList } from "react-native-gesture-handler";
+import { View } from "react-native-web";
+
+export default function Main() {
   let [about, setAbout] = useState([
-    {
-      name: "Ваш счет",
-      link: "Balance",
-      desc: { username: "alim", secondName: "kosaev" },
-    },
-    { name: "Помощь", link: "Help", desc: { text: "Удачи бро" } },
-    {
-      name: "Мой профиль",
-      link: "Profile",
-      desc: {
-        username: "alim",
-        secondName: "kosaev",
-        avatar:
-          "https://yt3.googleusercontent.com/ytc/APkrFKZUpelAfgCEsVNMZmGaT2gb4GIHODCwPGSCgLhN=s900-c-k-c0x00ffffff-no-rj",
-      },
-    },
+    { name: "Google", desc: "kik" },
+    { name: "asd", desc: "kik" },
+    { name: "dsaad", desc: "kik" },
+    { name: "d sad", desc: "kik" },
+    { name: "r33", desc: "kik" },
   ]);
 
-  const handleClickNavigation = (item) => {
-    console.log(item.link);
-    navigation.navigate(`${item.link}`, item);
-  };
+  const handleClickNavigation = () => {
+    navigator.navigate("About")
+  }
 
   return (
     <View>
-      <Text>Гавная страница</Text>
+      <Text>MAIN</Text>
       <FlatList
         data={about}
         renderItem={({ item }) => (
-          <TouchableHighlight onPress={() => handleClickNavigation(item)}>
-            <Text>{item.name}</Text>
+          <TouchableHighlight onPress={handleClickNavigation}>
+            <Text>{items.name}</Text>
           </TouchableHighlight>
         )}
       />
     </View>
   );
-};
+}
