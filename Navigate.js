@@ -1,8 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Profile } from "./components/Profile";
-import { Balance } from "./components/Balance";
-import { Help } from "./components/Help";
 import { Authorization } from "./pages/Authorization";
 import { Home } from "./pages/Home";
 import { PostPage } from "./pages/PostPage";

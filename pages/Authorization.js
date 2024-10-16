@@ -17,14 +17,12 @@ export const Authorization = ({ navigation }) => {
 
   return (
     <View>
-      <Text>WoW App</Text>
       {loginOption ? (
         <Login changeToReg={changeToReg} navigation={navigation} />
       ) : (
-        <Registration changeToLog={changeToLog} />
+        <Registration changeToLog={changeToLog} navigation={navigation} />
       )}
 
-      <Button title="GO" onPress={() => navigation.navigate("Help")} />
     </View>
   );
 };
